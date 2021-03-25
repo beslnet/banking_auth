@@ -25,7 +25,7 @@ func Start() {
 	router.HandleFunc("/auth/verify", ah.Verify).Methods(http.MethodGet)
 
 	address := os.Getenv("SERVER_ADDRESS")
-	port := os.Getenv("SERVER_PORT")
+	port := os.Getenv("SERVER_PORT2")
 	log.Println(fmt.Sprintf("Starting OAuth server on %s:%s ...", address, port))
 	log.Fatal(http.ListenAndServe(fmt.Sprintf("%s:%s", address, port), router))
 }
@@ -52,7 +52,7 @@ func getDbClient() *sqlx.DB {
 func sanityCheck() {
 	envProps := []string{
 		"SERVER_ADDRESS",
-		"SERVER_PORT",
+		"SERVER_PORT2",
 		"DB_USER",
 		"DB_ADDR",
 		"DB_PORT",

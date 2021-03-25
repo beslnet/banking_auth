@@ -1,6 +1,6 @@
 #!/bin/bash
 SERVER_ADDRESS=localhost \
-SERVER_PORT=8181 \
+SERVER_PORT2=8181 \
 DB_USER=root \
 DB_PASSWD= \
 DB_ADDR=localhost \
