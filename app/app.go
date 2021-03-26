@@ -26,7 +26,7 @@ func Start() {
 
 	// address := os.Getenv("SERVER_ADDRESS")
 	// port := os.Getenv("SERVER_PORT2")
-	log.Println(fmt.Sprintf("Starting OAuth server on %s:%s ...", address, port))
+	// log.Println(fmt.Sprintf("Starting OAuth server on %s:%s ...", address, port))
 	log.Fatal(http.ListenAndServe(":8181", router))
 }
 
