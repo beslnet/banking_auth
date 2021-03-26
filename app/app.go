@@ -24,10 +24,10 @@ func Start() {
 	router.HandleFunc("/auth/register", ah.NotImplementedHandler).Methods(http.MethodPost)
 	router.HandleFunc("/auth/verify", ah.Verify).Methods(http.MethodGet)
 
-	address := os.Getenv("SERVER_ADDRESS")
-	port := os.Getenv("SERVER_PORT2")
+	// address := os.Getenv("SERVER_ADDRESS")
+	// port := os.Getenv("SERVER_PORT2")
 	log.Println(fmt.Sprintf("Starting OAuth server on %s:%s ...", address, port))
-	log.Fatal(http.ListenAndServe(fmt.Sprintf("%s:%s", address, port), router))
+	log.Fatal(http.ListenAndServe(":8181", router))
 }
 
 func getDbClient() *sqlx.DB {
